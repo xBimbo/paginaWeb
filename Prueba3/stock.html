@@ -1,0 +1,48 @@
+<script>
+    class Producto {
+
+        constructor(foto, id, producto, stock, precio) {
+            this.foto = foto;
+            this.id = id;
+            this.producto = producto;
+            this.stock = stock;
+            this.precio = precio;
+        };
+
+        getId() {
+            return this.id;
+        };
+
+        setId(id) {
+            this.id = id;
+        };
+
+        getProducto() {
+            return this.producto;
+        };
+
+        setProducto(producto) {
+            this.producto = producto;
+        };
+
+        getFoto() {
+            return this.foto;
+        };
+
+        setFoto(foto) {
+            this.foto = foto;
+        };
+
+        getDescripción(){
+            this.descripción = descripción;
+        };
+
+        setDescripción(descripción){
+            this.descripción = descripción;
+        };
+
+        toString() {
+            return this.foto + ", " + this.id + ", " + this.producto + "," + this.stock + "," + this.precio + ",";
+        };
+
+    };

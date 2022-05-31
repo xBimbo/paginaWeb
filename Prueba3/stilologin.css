@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cuerpo {
+    background-image: url("ImagenLoginFondo/zapatillas-blancas.jpg");
+    background-size: cover;
+    
+}
+
+
+
+.cuerpoIndex{
+    background-color: antiquewhite;
+}
+
+.imgProduc{
+    border-radius: 50px;
+    border:3px solid rgb(19, 19, 61)
+}
+
+
+.textPrinci{
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+}
+
+
+.form-login {
+    width: 400px;
+    height: 340px;
+    background: #f7fbffcc;
+    margin: auto;
+    margin-top: 280px;
+    box-shadow: 20px 13px 37px rgb(0, 0, 0);
+    padding: 20px 30px;
+    border-top: 4px solid #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.form-login h5{
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+
+.controls{
+    width: 100%;
+    text-align: center;
+    color: white;
+    border: 1px solid #ffffff;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #252323;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.buttons {
+    width: 100%;
+    height: 40px;
+    background: #000000;
+    border: 1px solid white;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.buttons:hover{
+    background-color: #3c3c3c;
+    cursor:pointer;
+}
+
+.form-login p{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.form-login a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-login a:hover{
+    text-decoration: underline;
+}
+
+
+.conocenosTitulo{
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;}
+
+.textoContacto{
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;}

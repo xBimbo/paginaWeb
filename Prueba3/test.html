@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        class Producto {
+
+            constructor(id, producto, foto, stock, precio, descripción) {
+                this.id = id;
+                this.producto = producto;
+                this.foto = foto;
+                this.stock = stock;
+                this.precio = precio;
+                this.descripción = descripción;
+            };
+
+            getId() {
+                return this.id;
+            };
+
+            setId(id) {
+                this.id = id;
+            };
+
+            getProducto() {
+                return this.producto;
+            };
+
+            setProducto(producto) {
+                this.producto = producto;
+            };
+
+            getFoto() {
+                return this.foto;
+            };
+
+            setFoto(foto) {
+                this.foto = foto;
+            };
+
+            getDescripción(){
+                this.descripción = descripción;
+            };
+
+            setDescripción(descripción){
+                this.descripción = descripción;
+            };
+
+            toString() {
+                return this.id + ", " + this.producto + ", " + this.foto + "," + this.stock + "," + this.precio + "," + this.descripción;
+            };
+
+        };
+
+        var DescP1 = 'One Piece: One Piece es la historia de un chico llamado Monkey D. Luffy, quién se inspiró en Shanks, un pirata que le salvó la vida, '+
+                        'para convertirse en el Rey de los Piratas. Al comienzo de la serie, veinticuatro años antes de la historia actual, un pirata llamado '+
+                        'Gol D. Roger, conocido como el Rey de los Piratas, fue ejecutado, pero antes de su muerte, le dijo a la multitud de su tesoro, el One Piece. '+
+                        'Sus palabras desataron lo que sería conocida como «la Gran Era de la Piratería», innumerables piratas se dispusieron a buscar el tesoro causando '+
+                        'grandes problemas al Gobierno Mundial. Monkey D. Luffy se convierte en uno de ellos, deseando ser el próximo Rey de los Piratas y se dispone a '+
+                        'reunir compañeros de tripulación y comenzar sus aventuras.';
+
+        var DescP2 = 'Berserk (ベルセルク Beruseruku?) es una franquicia originada en el manga creado por Kentaro Miura. '+
+                        'Perteneciente al género épico fantástico, está ambientada en una tierra inspirada y con amplias similitudes a la Europa de la Alta Edad Media y Edad Moderna. '+
+                        'Cuenta la historia de Guts (traducido como Gatsu en la edición de Planeta y MangaLine en castellano), un mercenario huérfano. La misma está dividida en dos partes: '+
+                        'la primera (que va del volumen 4 al 13) cuenta su juventud y cómo conoce a Griffith, líder de un grupo mercenario llamado como la "Banda del Halcón". '+
+                        'La segunda parte (volúmenes del 1 al 3 y 14 al 41, ccon publicación todavía en decisión tras la muerte de Miura) es su historia tras el fatídico Eclipse.';
+
+        var DescP3 = 'Black Clover: Asta y Yuno fueron abandonados el mismo día, en la misma iglesia. Desde entonces, '+
+                        'han sido amigos incondicionales y junto a otros huérfanos, viven en una pequeña iglesia ubicada en la región más alejada del Reino del Trébol. '+
+                        'En un mundo donde la magia lo es todo, Asta nace sin ni una pizca de poderes mágicos. Es incapaz de utilizar cualquier tipo de magia, '+
+                        'y trata de compensar su falta de poder mágico entrenando arduamente todos los días. Por otro lado, Yuno, su mejor amigo y rival, es considerado un joven prodigio. '+
+                        'Posee una cantidad extraordinaria de poder mágico y cuenta con el talento suficiente para manipularlo. '+
+                        'Tras un evento durante su infancia, Asta decide que aunque sea un pobre huérfano abandonado que no puede utilizar magia desde el día en que nació…  '+
+                        'Él puede llegar a convertirse en alguien importante en ese mundo.';
+
+        var DescP4 = 'Jojo\'s: Jojo no Kimyou na Bouken (Las extravagantes aventuras de Jojo), más conocida mundialmente como JoJo s Bizarre Adventure, '+
+                        'narra la historia de la familia Joestar a través de las décadas y sus continuos enfrentamientos con el malvado vampiro Dio Brando y su legado. '+
+                        'Una de las características más reconocibles de la obra es que está dividida en distintas partes o generaciones, totalmente autoconclusivas '+
+                        'e independientes entre sí; aunque conectadas por la sangre, sudor y lágrimas de sus estirpes. Cada una transcurre en un tiempo y lugar distintos, '+
+                        'y hasta gozan de su propia estética, ambientación y temática particular. De este modo, cada una de las series dentro de la serie puede disfrutarse por separado, '+
+                        'y a su vez complementarse con las otras, ya que es muy común ver a los supervivientes de cada saga haciendo cameos (o directamente coprotagonizando) '+
+                        'alguna de las siguientes. Los protagonistas reciben el apodo de Jojo , normalmente una conjunción de su nombre y apellido en orden de aparición: '+
+                        'Jonathan Joestar, Joseph Joestar, Jotaro Kujo, Josuke Higashitaka (el kanji de suke puede leerse también como Jo ), etc., y por muchas características físicas '+
+                        'y nominales que compartan, cada uno cuenta con una personalidad, habilidad y hasta escala de valores completamente propios. La Inglaterra victoriana, '+
+                        'el México de mediados del siglo XX o el Japón actual, son algunos de los muchísimos tiempos y lugares que se recorren en los más de 130 años que abarca '+
+                        'esta épica historia creada por Hirohiko Araki hace ya tres décadas. JoJo s es la obra más larga y característica del mangaka, un autor que en Japón está '+
+                        'a la altura del mismísimo Akira Toriyama en cuanto a permanencia, fama e influencia en el imaginario colectivo.';
+
+        var DescP5 = 'Jujutsu Kaisen: Yuji Itadori es un genio en el atletismo. Pero no tiene ningún interés de correr en círculos, está contento como una '+
+                        'almeja en el Club de Investigación Oculta. Aunque solo está en el club por diversión, ¡las cosas se ponen serias cuando aparece un verdadero '+
+                        'espíritu en la escuela! Cuando su abuelo está en su lecho de muerte, Yuji le hace una promesa; que hará actos amables para que muera rodeado de '+
+                        'sus seres queridos, a diferencia de su abuelo. Sin embargo, la vida de Yuji da un giro repentino cuando conoce a Megumi Fushiguro, un chamán que '+
+                        'intenta recuperar un objeto maldito. Cuando los amigos de Yuji abren el objeto maldito que encontraron, las cosas van hacia el sur cuando los espíritus '+
+                        'malditos que engendró comienzan a vagar en la escuela. Como Fushiguro y Yuji son casi derrotados por uno de los espíritus, Yuji se traga el objeto '+
+                        'maldito y gana su poder. Como resultado, Yuji es maldecido por el objeto y es arrastrado al emocionante mundo de chamanes y espíritus malditos de Fushiguro.';
+
+        var DescP6 = 'Kimetsu No Yaiba: anjirou Kamado es un chico alegre y trabajador que vive felizmente junto a su familia, hasta que un fatídico día un demonio '+
+                        'llamado Muzan irrumpe en su vida matando a sus padres y maldice a su hermana pequeña convirtiéndola en demonio. Tras este incidente, y con el '+
+                        'propósito de vengar a sus padres y devolver a su hermana Nezuko a la normalidad, decide convertirse en un asesino de demonios. Para ello, acude '+
+                        'en ayuda de Sakonji Urokodaki, uno de los asesinos de demonios más fuertes del mundo... Entre samuráis, afiladas katanas, demonios y otros seres '+
+                        'mitológicos del folclore japonés, este manga es una apuesta segura para los amantes del género.';
+
+        var DescP7 = 'Naruto: Naruto Shippūden (ナルト 疾風伝, Naruto Shippūden, que significa "Naruto: Crónicas del Huracán") es una adaptación del anime '+
+                        'de la segunda parte del manga, tiene lugar dos años y medio después de que Naruto partiera de Konohagakure con Jiraiya. La serie fue '+
+                        'transmitida en Japón por TV-Tokyo desde el 15 de febrero de 2007 hasta concluir el 23 de marzo del 2017 con diez años de transmisión. '+
+                        'La trama incluye nuevos personajes, como Sai, Yamato, los Kages que no se habían visto hasta ahora, y los restantes miembros de la organización Akatsuki, '+
+                        'mostrando éste último un papel más activo que antes en su búsqueda para obtener a todas las Bestias con Cola.';
+
+        var DescP8 = 'Sailor Moon: Sailor Moon (美少女戦士セーラームーン Bishōjo Senshi Sērā Mūn?, Bella Guardiana Sailor Moon), '+
+                        'llamado Pretty Guardian Sailor Moon en Occidente, es la serie de manga original creada por Naoko Takeuchi. '+
+                        'Lanzado por primera vez en la revista mensual "Nakayoshi" en febrero de 1992 con un promedio de 40 páginas por entrega, '+
+                        'la historieta se terminó de publicar cinco años después, en marzo de 1997, llegando a cubrir cinco arcos distintos. '+
+                        'En abril de 1997 se publicó un especial tributo de Sailor Moon de 7 páginas, con información de los personajes, '+
+                        'a modo de resumen de toda la historia. El manga fue lanzado casi en simultáneo con el anime, un mes antes, '+
+                        'pero terminó un mes después que la serie animada, por lo que sus historias se bifurcan en cierto punto. '+
+                        'Toda la serie fue lanzada en colecciones completas en formato de libros.';
+
+        var DescP9 = 'Sakura Card Captor: La obra narra las aventuras de Sakura Kinomoto, una pequeña niña de diez años que accidentalmente libera un conjunto '+
+                        'de cartas que se encontraban dentro de un libro, el cual había descubierto en la biblioteca de su padre. Tras esto, Kero —el guardián del '+
+                        'libro— emerge y, al enterarse de que la mayoría de las cartas conocidas como las «cartas Clow» se habían esparcido por todas partes, '+
+                        'le dice a Sakura que ahora es su responsabilidad convertirse en una «cardcaptor» e ir en busca de ellas para evitar que ocurra una «catástrofe» en el mundo. '+
+                        'Por lo tanto, Sakura adquiere habilidades especiales para así enfrentarse a los poderes mágicos de cada carta y lograr capturarlas y sellarlas. '+
+                        'Ella se siente alentado por su mejor amiga Tomoyo Daidouji, y conoce a un cardcaptor rival, Shaoran Li, que es un descendiente directo del creador de las cartas Clow.';
+
+        var DescP10 = 'Shingeki no Kyojin (進撃の巨人 Lit. "Titán de Ataque"?), también conocida en países de habla hispana como Ataque a los titanes y Ataque de los titanes, '+
+                        'es una serie de manga japonesa escrita e ilustrada por Hajime Isayama. El manga se publicó en septiembre de 2009 en la revista Bessatsu Shōnen Magazine '+
+                        'de la editorial Kōdansha.La historia se desarrolla en un mundo ficticio en el que la humanidad está al borde de la extinción a causa de unas criaturas humanoides '+
+                        'llamadas «titanes», lo que obliga a los sobrevivientes a refugiarse en tres enormes murallas que impiden el acceso a dichos monstruos. La trama gira en torno a '+
+                        'Eren Jaeger quien después de perder a su madre a manos de los titanes, decide unirse al «Ejército de las murallas» junto a su hermana adoptiva y su mejor amigo con '+
+                        'el objetivo de vengar la muerte de su madre y destruir la los titanes. Más adelante, descubre que tiene el poder de transformarse en un titán con características '+
+                        'especiales, lo que desencadenará toda una serie de acontecimientos.';
+       
+
+
+        let Producto1 = new Producto("p1", "One Piece Volumen 1", "img/Productos/p1.jpg", "100", "$29.990", DescP1);
+        let Producto2 = new Producto("p2", "Berserk Volume 36", "img/Productos/p2.jpg", "100", "$29.990", DescP2);
+        let Producto3 = new Producto("p3", "Black Clover Volumen 3", "img/Productos/p3.jpg", "100", "$16.490", DescP3);
+        let Producto4 = new Producto("p4", "Jojo`s Bizarre Adventure Volumen 4", "img/Productos/p4.jpg", "100", "$15.690", DescP4);
+        let Producto5 = new Producto("p5", "Jujutsu Kaisen Volumen 1", "img/Productos/p5.jpg", "100", "$16.680", DescP5);
+        let Producto6 = new Producto("p6", "Kimetsu No Yaiba Volumen 1", "img/Productos/p6.jpg", "100", "$13.990", DescP6);
+        let Producto7 = new Producto("p7", "Naruto Shippuden Pack", "img/Productos/p7.jpg", "100", "$120.790", DescP7);
+        let Producto8 = new Producto("p8", "Sailor Moon Pretty Soldier Volumen 1", "img/Productos/p8.jpg", "100", "$14.980", DescP8);
+        let Producto9 = new Producto("p9", "Sakura Card Captor Volumen 2", "img/Productos/p9.jpg", "100", "$11.990", DescP9);
+        let Producto10 = new Producto("p10", "Shingeki No Kyojin Volumen 30", "img/Productos/p10.jpg", "100", "$15.000", DescP10);
+        
+
+        let Productos = [Producto1, Producto2, Producto3, Producto4, Producto5, Producto6, Producto7, Producto8, Producto9, Producto10];
+        
+        localStorage.setItem("Productos", JSON.stringify(Productos));
+
+        
+
+        let p1= JSON.parse(localStorage.getItem("Productos"));
+
+        
+
+        function verProductos(){
+
+            var salida = "";
+            var styleImg=" style='height:128px; width: 128px;' "
+            var styleDiv=" style='border: 2px solid red; background-color: black;' "
+                p1.forEach(documento => {
+                    
+                    salida = salida + "<div><img src='"+documento.foto+"'><br>";
+                    salida = salida + "ID = " + documento.id + "<br>";
+                    salida = salida + "Producto = " + documento.producto + "<br>";
+                    salida = salida + "Precio = " + documento.precio + "<br>";
+                    salida = salida + "Stock = " + documento.stock + "<br>";
+                    salida = salida + "Descripción = " + documento.descripción + "</div><br>";
+                    
+                });
+            
+
+
+            document.getElementById("idTablaProductos").innerHTML=salida;
+        }
+
+
+
+
+        
+    </script>
+</head>
+<body>
+    <h1>Mis Productos</h1>
+    <br>
+    <input type="button" value="Ver Productos" onclick="verProductos();">
+    <br>
+    <br>
+    <div id="idTablaProductos"></div>
+</body>
+</html>

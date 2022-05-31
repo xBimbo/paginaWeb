@@ -1,0 +1,21 @@
+.cuerpoContacto{
+    background-image: url("ImagenContacto/que-es-un-call-center-image_header.webp");
+    background-size: cover;  
+}
+
+.transparente{
+    background-color: rgba(255,255,255,0.5);
+}
+
+
+.ImagenNuestras{
+    width: 50%;
+    align-items: center;
+    margin: auto;
+    border-radius: 300px;
+    border:3px solid rgb(19, 19, 61)
+}
+
+.conocenosBody{
+    background-color: antiquewhite;
+}
