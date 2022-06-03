@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script>
+        class Producto {
+
+            constructor(id, producto, foto, stock, precio, descripción) {
+                this.id = id;
+                this.producto = producto;
+                this.foto = foto;
+                this.stock = stock;
+                this.precio = precio;
+                this.descripción = descripción;
+            };
+
+            getId() {
+                return this.id;
+            };
+
+            setId(id) {
+                this.id = id;
+            };
+
+            getProducto() {
+                return this.producto;
+            };
+
+            setProducto(producto) {
+                this.producto = producto;
+            };
+
+            getFoto() {
+                return this.foto;
+            };
+
+            setFoto(foto) {
+                this.foto = foto;
+            };
+
+            getDescripción(){
+                this.descripción = descripción;
+            };
+
+            setDescripción(descripción){
+                this.descripción = descripción;
+            };
+
+            toString() {
+                return this.id + ", " + this.producto + ", " + this.foto + "," + this.stock + "," + this.precio + "," + this.descripción;
+            };
+
+        };
+
+        var DesZap1 = 'Forum Low Zapatilla Urbana Hombre: Más que una zapatilla, es una declaración de estilo. La adidas Forum entró en escena en 1984'+ 
+                      'y conquistó corazones tanto en las canchas como en el mundo de la música. Esta versión combina la estética de los 80,'+ 
+                      'la energía explosiva del baloncesto y el clásico refuerzo lateral en forma de X para crear un diseño de caña baja pensado para las calles';
+
+        var DesZap2 =  'Forum Mid Zapatilla Urbana Hombre: Nike Blazer Mid 77 Vintage. Zapatillas. ESTILO VINTAGE. Las zapatillas Nike Blazer Mid '+
+                       '77 Vintage aprovechan el aspecto de la vieja escuela del básquet de Nike con un acabado de entresuela vintage,'+ 
+                       'lo que hace que parezca que las has estado guardando durante años. La parte superior de cuero y sintético brinda un soporte cómodo.'+ 
+                       'El tratamiento vintage en la entresuela proporciona un aspecto de la vieja escuela. La construcción en autoclave fusiona la suela'+ 
+                       'con la entresuela para una apariencia aerodinámica. La espuma expuesta en la lengüeta proporciona un aspecto retro.'+
+                       'La suela de goma sólida lisa tiene un diseño en espiga para lograr una excelente adherencia y durabilidad.';
+
+        var DesZap3 = 'Forum Low Zapatilla Urbana Mujer: Más que una zapatilla, es una declaración de estilo. La adidas Forum entró en escena en 1984'+ 
+                      'y conquistó corazones tanto en las canchas como en el mundo de la música. Esta versión combina la estética de los 80,'+ 
+                      'la energía explosiva del baloncesto y el clásico refuerzo lateral en forma de X para crear un diseño de caña baja pensado para las calles';
+
+        var DesZap4 = 'Swift Run 22 Primegreen Zapatilla Urbana Hombre: Más que una zapatilla, es una declaración de estilo. La adidas Forum entró en escena en 1984'+ 
+                      'y conquistó corazones tanto en las canchas como en el mundo de la música. Esta versión combina la estética de los 80,'+ 
+                      'la energía explosiva del baloncesto y el clásico refuerzo lateral en forma de X para crear un diseño de caña baja pensado para las calles';
+
+        var DesZap5 = 'ZAPATILLA PUMA CLÁSICO: Puma es más que zapatos deportivos, también es estilo de vida; ese estilo de vida que te empuja, el que te dice que todo es posible,'+ 
+                      'porque todo es posible. Explora la colección de zapatillas para hombre: desde el calzado de alto rendimiento que te ayuda a correr más rápido,'+
+                      'trabajar más y ser mejor, hasta zapatillas deportivas que te hacen ver bien. Conoce lo último que trae Puma porque, para cada estilo, existe un calzado Puma ideal.'+ 
+                      'No tienes que sacrificar el look perfecto para encontrar un par de zapatillas que puedan seguirte el ritmo, porque tienes a Puma.';
+
+        var DesZap6 = 'Vikky v2 Cat Zapatilla Urbana Mujer: Puma es más que zapatos deportivos, también es estilo de vida; ese estilo de vida que te empuja, el que te dice que todo es posible,'+ 
+                      'porque todo es posible. Explora la colección de zapatillas para hombre: desde el calzado de alto rendimiento que te ayuda a correr más rápido,'+
+                      'trabajar más y ser mejor, hasta zapatillas deportivas que te hacen ver bien. Conoce lo último que trae Puma porque, para cada estilo, existe un calzado Puma ideal.'+ 
+                      'No tienes que sacrificar el look perfecto para encontrar un par de zapatillas que puedan seguirte el ritmo, porque tienes a Puma.';
+
+        var DesZap7 = 'Anzarun Lite Zapatilla Urbana Mujer: Puma es más que zapatos deportivos, también es estilo de vida; ese estilo de vida que te empuja, el que te dice que todo es posible,'+ 
+                      'porque todo es posible. Explora la colección de zapatillas para hombre: desde el calzado de alto rendimiento que te ayuda a correr más rápido,'+
+                      'trabajar más y ser mejor, hasta zapatillas deportivas que te hacen ver bien. Conoce lo último que trae Puma porque, para cada estilo, existe un calzado Puma ideal.'+ 
+                      'No tienes que sacrificar el look perfecto para encontrar un par de zapatillas que puedan seguirte el ritmo, porque tienes a Puma.';
+
+        var DesZap8 = 'Electron E Pro Zapatilla Urbana Hombre: Puma es más que zapatos deportivos, también es estilo de vida; ese estilo de vida que te empuja, el que te dice que todo es posible,'+ 
+                      'porque todo es posible. Explora la colección de zapatillas para hombre: desde el calzado de alto rendimiento que te ayuda a correr más rápido,'+
+                      'trabajar más y ser mejor, hasta zapatillas deportivas que te hacen ver bien. Conoce lo último que trae Puma porque, para cada estilo, existe un calzado Puma ideal.'+ 
+                      'No tienes que sacrificar el look perfecto para encontrar un par de zapatillas que puedan seguirte el ritmo, porque tienes a Puma.';
+
+        var DesZap9 = 'Star X High Zapatilla Urbana Hombre: Esta Chuck High Street presenta una lona duradera inspirada en el estilo outdoor y nuestra lona clásica,'+ 
+                      'además de un acolchado adicional en el cuello y la lengüeta, y un cordón elástico interior para un ajuste seguro. Incluye una plantilla OrthoLite'+ 
+                      'acolchada para mantener la comodidad.';
+
+        var DesZap10 = 'Star X High Zapatilla Urbana Mujer: Esta Chuck High Street presenta una lona duradera inspirada en el estilo outdoor y nuestra lona clásica,'+ 
+                       'además de un acolchado adicional en el cuello y la lengüeta, y un cordón elástico interior para un ajuste seguro. Incluye una plantilla OrthoLite'+ 
+                       'acolchada para mantener la comodidad.';
+       
+        var DesZap11 = 'Wing High Zapatilla Urbana Hombre: Esta Chuck High Street presenta una lona duradera inspirada en el estilo outdoor y nuestra lona clásica,'+ 
+                       'además de un acolchado adicional en el cuello y la lengüeta, y un cordón elástico interior para un ajuste seguro. Incluye una plantilla OrthoLite'+ 
+                       'acolchada para mantener la comodidad.';
+
+        var DesZap12 = 'Star X High Zapatilla Urbana Hombre: Esta Chuck High Street presenta una lona duradera inspirada en el estilo outdoor y nuestra lona clásica,'+ 
+                       'además de un acolchado adicional en el cuello y la lengüeta, y un cordón elástico interior para un ajuste seguro. Incluye una plantilla OrthoLite'+ 
+                       'acolchada para mantener la comodidad.';
+
+
+        let Producto1 = new Producto("zap1", "Forum Low Zapatilla Urbana Hombre", "Zapatillas/adidas1.jpg", "200", "$84.000", DesZap1);
+        let Producto2 = new Producto("zap2", "Forum Mid Zapatilla Urbana Hombre", "Zapatillas/adidas2.jpg", "200", "$94.990", DesZap2);
+        let Producto3 = new Producto("zap3", "Forum Low Zapatilla Urbana Mujer", "Zapatillas/adidas3.jpg", "200", "$94.990", DesZap3);
+        let Producto4 = new Producto("zap4", "Swift Run 22 Primegreen Zapatilla Urbana Hombre", "Zapatillas/adidas4.jpg", "200", "$74.990", DesZap4);
+        let Producto5 = new Producto("zap5", "Clasico Zapatilla Urbana Hombre", "Zapatillas/Puma1.jpg", "200", "$46.990", DesZap5);
+        let Producto6 = new Producto("zap6", "Vikky v2 Cat Zapatilla Urbana Mujer", "Zapatillas/Puma2.jpg", "200", "$49.990", DesZap6);
+        let Producto7 = new Producto("zap7", "Anzarun Lite Zapatilla Urbana Mujer", "Zapatillas/Puma3.jpg", "200", "$37.990", DesZap7);
+        let Producto8 = new Producto("zap8", "Electron E Pro Zapatilla Urbana Hombre", "Zapatillas/Puma4.jpg", "200", "$49.990", DesZap8);
+        let Producto9 = new Producto("zap9", "Star X High Zapatilla Urbana Hombre", "Zapatillas/starter1.jpg", "200", "$54.990", DesZap9);
+        let Producto10 = new Producto("zap10", "Zapatilla Urbana Hombre", "Zapatillas/starter2.jpg", "200", "$44.990", DesZap10);
+        let Producto11 = new Producto("zap11", "Wing High Zapatilla Urbana Hombre", "Zapatillas/starter3.jpg", "200", "$44.990", DesZap11);
+        let Producto12 = new Producto("zap12", "Star X High Zapatilla Urbana Hombre", "Zapatillas/starter4.jpg", "200", "$54.990", DesZap12);
+
+        let Productos = [Producto1, Producto2, Producto3, Producto4, Producto5, Producto6, Producto7, Producto8, Producto9, Producto10];
+        
+        localStorage.setItem("Productos", JSON.stringify(Productos));
+
+        
+
+        let p1= JSON.parse(localStorage.getItem("Productos"));
+
+        
+
+        function verProductos(){
+
+            var salida = "";
+            var styleImg=" style='height:128px; width: 128px;' "
+            var styleDiv=" style='border: 2px solid red; background-color: green;' "
+                p1.forEach(documento => {
+                    
+                    salida = salida + "<div><img src='"+documento.foto+"'><br>";
+                    salida = salida + "ID = " + documento.id + "<br>";
+                    salida = salida + "Producto = " + documento.producto + "<br>";
+                    salida = salida + "Precio = " + documento.precio + "<br>";
+                    salida = salida + "Stock = " + documento.stock + "<br>";
+                    salida = salida + "Descripción = " + documento.descripción + "</div><br>";
+                    
+                });
+            
+
+            
+            document.getElementById("idTablaProductos").innerHTML=salida;
+        }
+
+
+
+
+        
+    </script>
+</head>
+<body>
+    <h1>Mis Productos</h1>
+    <br>
+    <input type="button" value="Ver Productos" onclick="verProductos();">
+    <br>
+    <br>
+    <div id="idTablaProductos"></div>
+</body>
+</html>

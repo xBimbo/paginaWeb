@@ -1,48 +1,117 @@
-<script>
-    class Producto {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-        constructor(foto, id, producto, stock, precio) {
-            this.foto = foto;
-            this.id = id;
-            this.producto = producto;
-            this.stock = stock;
-            this.precio = precio;
+    <script>
+        class Producto {
+    
+            constructor(foto, id, producto, stock, precio) {
+                this.foto = foto;
+                this.id = id;
+                this.producto = producto;
+                this.stock = stock;
+                this.precio = precio;
+            };
+    
+            getId() {
+                return this.id;
+            };
+    
+            setId(id) {
+                this.id = id;
+            };
+    
+            getProducto() {
+                return this.producto;
+            };
+    
+            setProducto(producto) {
+                this.producto = producto;
+            };
+    
+            getFoto() {
+                return this.foto;
+            };
+    
+            setFoto(foto) {
+                this.foto = foto;
+            };
+    
+            getDescripción(){
+                this.descripción = descripción;
+            };
+    
+            setDescripción(descripción){
+                this.descripción = descripción;
+            };
+    
+            toString() {
+                return this.foto + ", " + this.id + ", " + this.producto + "," + this.stock + "," + this.precio + ",";
+            };
+    
         };
+    
+        let producto1 = new Producto("img/productos/1.jpg",1,"Adidas Forum Low Hombre", 200, "$84.000");
+        console.log(producto.toString());
 
-        getId() {
-            return this.id;
-        };
 
-        setId(id) {
-            this.id = id;
-        };
+        let productos = [producto1];
 
-        getProducto() {
-            return this.producto;
-        };
 
-        setProducto(producto) {
-            this.producto = producto;
-        };
+        localStorage.setItem("producto", JSON.stringify(producto));
 
-        getFoto() {
-            return this.foto;
-        };
+        function verProductos(){
 
-        setFoto(foto) {
-            this.foto = foto;
-        };
+        var salida = "";
+        var styleImg=" style='height:128px; width: 128px;' "
+        var styleDiv=" style='border: 2px solid red; background-color: black;' "
+            p1.forEach(documento => {
+        
+        salida = salida + "<div><img src='"+documento.foto+"'><br>";
+        salida = salida + "ID = " + documento.id + "<br>";
+        salida = salida + "Producto = " + documento.producto + "<br>";
+        salida = salida + "Precio = " + documento.precio + "<br>";
+        salida = salida + "Stock = " + documento.stock + "<br>";
+        salida = salida + "Descripción = " + documento.descripción + "</div><br>";
+        
+    });
 
-        getDescripción(){
-            this.descripción = descripción;
-        };
 
-        setDescripción(descripción){
-            this.descripción = descripción;
-        };
 
-        toString() {
-            return this.foto + ", " + this.id + ", " + this.producto + "," + this.stock + "," + this.precio + ",";
-        };
+document.getElementById("idTablaProductos").innerHTML=salida;
+}
 
-    };
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+
+<body>
+    <h1>Mis Productos</h1>
+<br>
+<input type="button" value="Ver Productos" onclick="verProductos();">
+<br>
+<br>
+<div id="idTablaProductos"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
